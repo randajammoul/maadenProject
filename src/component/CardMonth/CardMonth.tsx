@@ -1,26 +1,27 @@
 import { type ReactNode } from "react";
 import Paragraph from "../Paragraph/Paragraph";
 import styles from "./CardMonth.module.css";
-import { getRightContent, getVisibleSensorAnimation } from "../../ts/util";
+import { getRightContent}  from "../../ts/util";
 import useAppStore from "../../store";
 
 interface ContentItem {
   title: string[];
   text: ReactNode[];
 }
-interface PhotoItem {
-  type: "icon" | "image";
-  src: string;
-}
+// type PhotoType = "icon" | "image";
 
+// interface PhotoItem {
+//   type: PhotoType;
+//   src: string;
+// }
 interface Props {
    dataMonth: ContentItem[];
-   photo: (PhotoItem | undefined)[];
+  //  photo: (PhotoItem | undefined)[];
 }
 
 
 
-const CardMonth = ({ dataMonth,photo}: Props) => {
+const CardMonth = ({ dataMonth}: Props) => {
   const rtlLanguage = useAppStore ((state) => state.rtlLanguage);
   return (
     <div>
@@ -35,7 +36,7 @@ const CardMonth = ({ dataMonth,photo}: Props) => {
     <Paragraph>{getRightContent(rtlLanguage, item.text)}</Paragraph>
 
     {/* الصورة/الأيقونة للكارد الحالي */}
-    {photo?.[idx] && (
+    {/* {photo?.[idx] && (
       <div
         style={getVisibleSensorAnimation(
           true,
@@ -51,7 +52,7 @@ const CardMonth = ({ dataMonth,photo}: Props) => {
           className={styles.imagemonth}
         />
       </div>
-    )}
+    )} */}
   </div>
 ))}
 

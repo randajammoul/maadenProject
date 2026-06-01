@@ -6,32 +6,31 @@ import { getRightContent } from "../../../ts/util";
 import useAppStore from "../../../store";
 import useWindowSize from "../../../hooks/useWindowSize";
 import Paragraph from "../../../component/Paragraph/Paragraph";
-import icon1 from "./images/january.svg";
-import image2 from "./images/februray.png";
-import image3 from "./images/march.png";
-import image4 from "./images/April.png";
-import icon4 from "./images/April_1 1.svg"
-import icon5 from "./images/May.svg";
-import image6 from "./images/june.png";
-import image7 from "./images/Augest.png";
-import icon8 from "./images/September.svg";
-import image11 from "./images/december.png";
+// import icon1 from "./images/january.svg";
+// import image2 from "./images/februray.png";
+// import image3 from "./images/march.png";
+// import image4 from "./images/April.png";
+// import icon4 from "./images/April_1 1.svg"
+// import icon5 from "./images/May.svg";
+// import image6 from "./images/june.png";
+// import image7 from "./images/Augest.png";
+// import icon8 from "./images/September.svg";
+// import image11 from "./images/december.png";
 import iconLeft from "../../../component/CardMonth/images/iconLeft.svg";
 import iconRight from "../../../component/CardMonth/images/iconRight.svg";
-
-const imageMonth =[
-  [undefined, undefined, undefined, { type: "icon", src: icon1 }],
-  [undefined, { type: "image", src: image2 }],
-  [undefined, { type: "image", src: image3 }],
-  [{ type: "icon", src: icon4 }, { type: "image", src: image4 }],
-  [{ type: "icon", src: icon5 }],
-  [undefined, { type: "image", src: image6 }],
-  [{ type: "image", src: image7 }],
-  [{ type: "icon", src: icon8 }],
-  [],
-  [],
-  [undefined, undefined, { type: "image", src: image11 }],
-];
+// const imageMonth = [
+//   [undefined, undefined, undefined, { type: "icon", src: icon1 }],
+//   [undefined, { type: "image", src: image2 }],
+//   [undefined, { type: "image", src: image3 }],
+//   [{ type: "icon", src: icon4 }, { type: "image", src: image4 }],
+//   [{ type: "icon", src: icon5 }],
+//   [undefined, { type: "image", src: image6 }],
+//   [{ type: "image", src: image7 }],
+//   [{ type: "icon", src: icon8 }],
+//   [],
+//   [],
+//   [undefined, undefined, { type: "image", src: image11 }],
+// ] ;
 
 
 const YearInReview = () =>{
@@ -87,7 +86,7 @@ const YearInReview = () =>{
          <CardMonth
             key={currentMonthIndex}
             dataMonth={PagrContent.month[currentMonthIndex].content}
-            photo={imageMonth[currentMonthIndex]}
+            // photo={imageMonth[currentMonthIndex]}
          /> 
   
 </div>

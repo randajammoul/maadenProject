@@ -1,4 +1,4 @@
-import content from "../content/content";
+// import content from "../content/content";
 
 export const getVisibleSensorAnimation = (
   isVisible: boolean,
@@ -33,9 +33,7 @@ export const getRightContent = (rtl: boolean, contentList: any[]) =>
   rtl ? contentList[1] : contentList[0];
 
 // Download Center
-export function getDownloadCenter() {
-  return content.downloadCenter;
-}
+// 
 
 export function capitalize(name: string) {
   return name?.charAt(0).toUpperCase() + name?.slice(1);

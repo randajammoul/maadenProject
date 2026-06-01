@@ -34,10 +34,10 @@ const Tabs = ({ labels, contents ,  labelsText = [], contentClassNames = [""], n
   const [pressedFromInsideTabs, setPressedFromInsideTabs] = useState(false);
 
   const handleClicktab = (index: number) => {
-    // setActiveTabIndex(index);
+    setPressedFromInsideTabs(true);
     changePage({ mainPage, subMenuPageLevel1: index });
     if (ref.current) {
-      if (subMenuPageLevel1 === 0 && !pressedFromInsideTabs)
+      if (subMenuPageLevel1 === 0 && pressedFromInsideTabs === true)
       {
         setTimeout(() => {
           window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -56,7 +56,7 @@ const Tabs = ({ labels, contents ,  labelsText = [], contentClassNames = [""], n
     handleClicktab(subMenuPageLevel1);
   }, [subMenuPageLevel1, mainPage]);
 
-  const newDelayInSec = mainPage === 0 ? 0 : subMenuPageLevel1 === 0 ? 2 : 0;
+  // const newDelayInSec = mainPage === 0 ? 0 : subMenuPageLevel1 === 0 ? 2 : 0;
   return (
     <div className={styles.wrapper} 
     // ref={refWrapper} 

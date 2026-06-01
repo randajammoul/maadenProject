@@ -1,5 +1,5 @@
 
-const content = {
+const Content1 = {
     pages:{
         Leadership:{
       title:["Leadership","كلمة الإدارة"],
@@ -911,3 +911,4 @@ const content = {
     },
     }
 }
+export default Content1;
