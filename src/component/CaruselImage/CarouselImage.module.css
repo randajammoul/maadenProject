@@ -1,7 +1,7 @@
 .carousel {
   width: 100%;
   overflow: hidden;
-  height: 290px; /* ارتفاع الشريط */
+  height: 275px; /* ارتفاع الشريط */
   display: flex;
   align-items: center;
 }

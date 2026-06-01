@@ -16,18 +16,20 @@ const Home = ()=> {
      <div className={styles.container}>
 
 <div className="spacer-80"></div>
+
+ <div className="spacer-8"></div>
   <div className={styles.titleHome} >
      <div className={styles.titleContainer}>
       <div ref={ref}>
           <Paragraph style={getVisibleSensorAnimation(InView,"fade-in-40px 0.8s backwards")}
-                   fontClassName={`bold ${windowWidth < 1280 ? "h3" : "h1"}`}
+                   fontClassName={`bold ${windowWidth < 1280 ? "h2" : "h3"}`}
                      classNames="white uppercase">
               {getRightContent(rtlLanguage,pageContent.title1)}
           </Paragraph> 
       </div>
       <div ref={ref}>
           <Paragraph style={getVisibleSensorAnimation(InView,"fade-in-40px 0.8s 0.3s backwards")}
-                     fontClassName={`bold ${windowWidth < 1280 ? "h3" : "h1"}`}
+                     fontClassName={`bold ${windowWidth < 1280 ? "h3" : "h2"}`}
                      classNames=" white uppercase">
               {getRightContent(rtlLanguage,pageContent.title2)}
           </Paragraph> 
@@ -43,7 +45,7 @@ const Home = ()=> {
   </div>
  
 
-
+ <div className="spacer-8"></div>
   <div  ref={ref} style={getVisibleSensorAnimation(InView,"fade-in-40px 0.8s 0.8s backwards")}
     className={styles.carouselContainer}>
       <Carouselmage/>
