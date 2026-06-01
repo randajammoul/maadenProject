@@ -1,0 +1,27 @@
+.TopCard{
+     padding: 20px;
+     background-color: var(--color-own-grey);    
+    
+}
+.middelCard{
+    display: flex;
+    flex-direction: row;
+    gap: 16PX;
+    padding: 20px;
+    background-color: var(--color-own-gray-50);
+    align-items: center;
+} 
+@media screen and (min-width:900px) {
+     .cardGray{
+    height: 430px;
+    max-width: 400px;
+} 
+}
+.cardGray{
+    border:1px solid var(--color-own-grey);
+   
+} 
+.bodyCard{
+    padding: 20px;
+
+}

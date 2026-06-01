@@ -1,0 +1,46 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  height: 290px; /* ارتفاع الشريط */
+  display: flex;
+  align-items: center;
+}
+
+.track {
+  display: flex;
+  gap: 20px; /* المسافة بين الصور */
+  /* الحركة الافتراضية LTR */
+  animation: scroll-ltr 20s linear infinite;
+}
+
+.track img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* الحركة من اليمين لليسار */
+@keyframes scroll-ltr {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* الحركة من اليسار لليمين */
+@keyframes scroll-rtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+/* لو الصفحة RTL */
+[dir="rtl"] .track {
+  animation: scroll-rtl 20s linear infinite;
+}

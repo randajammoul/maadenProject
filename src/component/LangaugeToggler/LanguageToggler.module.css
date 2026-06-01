@@ -1,0 +1,18 @@
+.languageToggler {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+[dir="rtl"] .languageToggler{
+  
+}
+
+@media (hover:hover){
+  .languageToggler:hover{
+    transform: scale(1.05);
+  }
+}

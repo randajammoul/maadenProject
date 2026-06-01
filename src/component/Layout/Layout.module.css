@@ -1,0 +1,20 @@
+
+.layout {
+  position: relative;
+}
+.menuContainer{
+    padding: 10px 20px;
+}
+.menuOverlay {
+  position: absolute; /* أو sticky حسب ما تحب */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* أعلى من Cover */
+}
+
+/* محتوى الصفحة */
+.mainContent {
+  position: relative;
+  z-index: 1; /* تحت Menu */
+}

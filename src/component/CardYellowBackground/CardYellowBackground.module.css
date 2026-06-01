@@ -1,0 +1,11 @@
+.cardYellowBackground{
+    display: flex;
+    justify-content: space-between;
+    min-width: 275px;
+}
+.icon{
+    width: 50px;
+}
+.invisible{
+   visibility: hidden;
+}

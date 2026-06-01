@@ -1,0 +1,82 @@
+
+/* صف النصوص + الأيقونة */
+.topPart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card {
+  position: relative;
+  display: flex; 
+  flex-direction:column;
+  overflow: hidden;
+  max-height: 360px;   /* أقصى ارتفاع للكارد */
+  height: auto;        /* ارتفاع مرن للصورة */
+
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  height: a;
+  max-height: 360px;   /* نفس الحد للكارد */
+  overflow: hidden;    /* يقطع أي محتوى زائد */
+}
+
+.imagecard {
+  display: block;
+  width: 100%;
+  height: auto;        /* يملأ الـ wrapper بدون تجاوز max-height */
+  object-fit: contain;   /* الصورة تغطي الـ wrapper بدون تشويه */
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+
+  transform: translateY(100%); /* يبدأ مخفي تحت الكارد */
+  opacity: 1; /* يبقى مرئي */
+  transition: transform 0.5s ease; /* تأثير الصعود فقط */
+}
+
+/* عند hover: صعود تدريجي */
+.imageWrapper:hover .overlay {
+  transform: translateY(0); 
+}
+
+/* عند إزالة hover: يعود فورًا لمكانه بدون animation */
+.imageWrapper:not(:hover) .overlay {
+  transform: translateY(100%);
+}
+
+/* Responsive للموبايل */
+@media screen and (max-width: 868px) {
+  .card {
+     display: flex; 
+    flex-direction: row; /* ينزل تحت بعض */
+    width: 100%;     /* ياخد كامل عرض الشاشة */
+  }
+
+  .imageWrapper {
+    display: block;
+    width: 100%;
+  }
+
+  .imagecard {
+    width: 100%;
+  }
+}

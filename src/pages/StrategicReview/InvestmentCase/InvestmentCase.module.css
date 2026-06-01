@@ -1,0 +1,52 @@
+.background{
+    background-image: url(../images/InvestmentCase/backgroundEn.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.backgroundAr{
+    background-image: url(../images/InvestmentCase/backgroundAr.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/* خلي الكارد ياخذ كامل المساحة المخصصة إله */
+.coloredCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* يساوي ارتفاع باقي الكاردات */
+}
+ .containerCard {
+  display: grid;
+   grid-template-columns: 1fr;/* 3 كاردات بالسطر */
+  gap: 24px; /* مسافة بين الكاردات */
+  align-items: stretch; /* يخلي كل الكاردات نفس الارتفاع */
+}
+
+  .bottomCard{
+    padding: 20px;
+    background-color: var( --color-white);
+}
+
+@media (min-width: 992px) {
+  .containerCard {
+     grid-template-columns: repeat(3, 1fr); /* كارد واحد بالسطر */
+  }
+
+.bottomCard{
+    min-height: 370px;
+}
+
+}
+.line{
+    height: 1px;
+}
+
+.topcard{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+}

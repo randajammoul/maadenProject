@@ -1,0 +1,24 @@
+.imageMap{
+    width: 75%;
+    object-fit: contain;
+}
+.cardZone{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.cardText {
+  display: flex;
+  gap: 64px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+
+
+
+@media screen and (min-width :900px) {
+   .cardZone{
+    flex-direction: row;
+} 
+}

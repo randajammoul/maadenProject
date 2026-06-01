@@ -1,0 +1,15 @@
+.wrapper {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.icon {
+  object-fit: contain;
+  width: 40px;
+}
+
+@media (hover: hover) {
+  .wrapper:hover {
+    transform: scale(1.05);
+  }
+}

@@ -1,0 +1,104 @@
+.wrapper {
+  position: relative;
+  top:55px;
+}
+.scrollMark {
+  position: absolute;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  z-index: -1;
+}
+.labelContainer {
+  /* top: var(--navbar-height); */
+  z-index: 4;
+  overflow: hidden;
+  transition: all .4s;
+}
+
+.labelContainer.hideTabs{
+  opacity: 0;
+ 
+}
+
+.labelContainerWrapper{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 16px;
+  /* text-align: center; */
+  
+  /* background-color: var(--color-aubergine-200-50);
+   */
+}
+
+@media screen and (max-width: 1023px) {
+  .labelContainerWrapper{
+    padding: 0 20px;
+  }
+}
+
+.label {
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.label.active {
+  font-weight: 700;
+}
+
+.label:hover {
+  transform: scale(1.03);
+}
+
+.contentContainer {
+  /* padding-top: 10px; */
+}
+
+.borderBottomWhite{
+  border-bottom: 1px solid white;
+}
+
+.labelContainerWrapper > * {
+  flex: 1;
+}
+
+.labelWrapper{
+  /* max-width: 350px;
+  width: 100%; */
+}
+
+@media screen and (min-width: 1024px) {
+
+  .wrapper{
+   
+    /* bottom: 105px; */
+    /* height: calc(100% + 120px); */
+    /* margin-bottom: -120px; */
+  }
+
+  .mainWrapper{
+    position: relative;
+    /* padding-bottom: 120px; */
+    overflow: hidden;
+  }
+
+ 
+
+  .labelContainerWrapper{
+    flex-direction: row;
+    justify-content: center;
+    
+  }
+
+  .labelContainerWrapper > *{
+    flex-basis: 20%;
+  }
+/* 
+  .labelContainer{
+    position: sticky;
+    top: 0;
+    top: var(--navbar-height);
+  } */
+  
+}

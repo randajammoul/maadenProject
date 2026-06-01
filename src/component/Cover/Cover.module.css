@@ -1,0 +1,81 @@
+.cover {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  animation: glow 3s linear infinite; 
+  animation-delay: 1s/* 👈 هون حط الأنيميشن */
+}
+/* الشعاع */
+.coverShine {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 40%; /* أكبر شوي لتدرج أوسع */
+  height: 100%;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,      /* بداية شفافة */
+    rgba(255, 255, 255, 0.2) 30%,   /* بداية التوهج */
+    rgba(255, 255, 255, 0.5) 50%,   /* أقوى جزء من الشعاع */
+    rgba(255, 255, 255, 0.2) 70%,   /* نهاية التوهج */
+    rgba(255, 255, 255, 0) 100%     /* نهاية شفافة */
+  );
+    animation: shine-ltr 3s linear infinite;
+  
+}
+
+
+/* إذا RTL */
+    [dir="rtl"] .coverShine {
+      right: -150%;
+      animation: shine-rtl 3s linear infinite;
+    }
+
+/* حركة الشعاع */
+@keyframes shine-ltr {
+  0% {
+    left: -150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+@keyframes shine-rtl {
+  0% {
+    right: -150%;
+  }
+  100% {
+    right: 150%;
+  }
+}
+
+/* اضاءة الصورة كلها */
+@keyframes glow {
+  0%, 100% {
+    filter: brightness(1); /* الوضع الطبيعي */
+  }
+  50% {
+    filter: brightness(1.2); /* 👈 تضوي الصورة */
+  }
+}
+.textContainer {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  height: 100vh;
+}
+
+
+@media screen and (max-width: 768px) {
+  .textContainer {
+    justify-content: center;
+    text-align: center; 
+  }
+}
+
+  

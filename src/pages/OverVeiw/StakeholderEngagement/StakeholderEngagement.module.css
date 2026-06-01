@@ -1,0 +1,66 @@
+.backgroundPage{
+    background-image: url(./images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+ 
+}
+.containerLiner{
+  transform: rotate(0deg);
+   display: block;
+   overflow: hidden;
+}
+[dir="rtl"] .containerLiner {
+  transform: rotate(180deg);
+}
+.containerStakeholder{
+  display: flex;
+  flex-direction:column;
+  gap: 12px;
+}
+@media screen and (max-width:1024px) {
+  .imageSvg{
+   width: 100%;
+}
+}
+
+.cardStakeholder {
+  opacity: 1;
+  background-color: var(--color-white);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* width: 100%; */
+}
+
+
+@media screen and (min-width:1024px ) {
+  /* .imageSvg{
+   width: 100%;
+} */
+  .containerStakeholder{
+  flex-direction: row;
+}
+.cardsWrapper {
+  position: relative;
+  width: 80%; 
+}
+.cardStakeholder {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  opacity: 0;
+  background-color: var(--color-white);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 400px;
+}
+}
+.activeCard {
+  opacity: 1;
+  z-index: 2;
+}

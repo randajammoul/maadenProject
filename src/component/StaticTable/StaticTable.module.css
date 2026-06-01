@@ -1,0 +1,160 @@
+.title {
+  /* margin-bottom: 16px; */
+}
+
+.titlesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.staticTable {
+  width: 100%;
+  position: relative;
+  border-collapse: collapse;
+  color: #000;
+ 
+}
+.staticTable td,
+.staticTable th {
+  border-collapse: collapse;
+ 
+}
+
+.staticTableHeader,
+.staticTableBody {
+  position: relative;
+  width: 100%;
+  background: var(--color-mepco-dark-6);
+}
+
+.headerCellWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+}
+
+.staticTableBody {
+  background: white;
+}
+
+.staticTableRowHeading {
+  position: relative;
+  
+}
+
+.staticTableContentRow td{
+  border-bottom: 1px solid var(--color-mepco-dark-6);
+}
+
+.staticTableContentRow:last-child td {
+  border-bottom: none;
+}
+
+.tableList {
+  list-style-type: initial;
+}
+
+.preHeader {
+  /* border-bottom: 1px solid black; */
+  padding-bottom: 8px;
+  padding-top: 16px;
+}
+
+.preHeader::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color:var(--color-yellow-brand);
+  display: inline-block;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+.textColor{
+  color: var(--color-mepco-dark);
+}
+.titleColor{
+  color: var(--color-text);
+}
+
+.stickyCol{
+  --col-width:100px;
+  position: -webkit-sticky ;
+  position: sticky ;
+  z-index: 1;
+  /* background-color: aqua; */
+}
+
+.stickyHeader{
+  overflow-y: auto;
+  height: 500px;
+}
+
+.stickyHeader .staticTableHeader{
+  position: -webkit-sticky ;
+  position: sticky ;
+  z-index: 2;
+  top: 0px;
+
+}
+
+.stickyHeader .staticTableHeader{
+  background-color: var(--color-mepco-dark-6);
+}
+
+
+.firstCol{
+  /* width: var(--col-width) ; */
+  min-width: var(--col-width) ;
+  /* max-width: var(--col-width) ; */
+  left: 0px;
+  background-color: white;
+  
+
+}
+
+/* .row:hover .firstCol{
+  background-color: hsla(26, 41%, 97%, 1);
+} */
+
+[dir="rtl"] .firstCol{
+  left: initial;
+  right: 0;
+}
+
+.firstColHeader{
+  background-color: var(--color-mepco-dark-6);
+}
+
+.secondCol{
+  /* width: 150px ;
+  min-width: 150px ;
+  max-width: 150px ; */
+  left: var(--col-width) ;
+}
+.color{
+  color:hsla(35, 66%, 48%, 1);
+}
+.normalColor{
+  color: #000;;
+}
+
+[dir="rtl"] .secondCol{
+  right: var(--col-width);
+}
+
+@media screen and (min-width: 768px) {
+  .stickyCol{
+    --col-width: 250px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+
+  .textColor{
+    max-width: 800px;
+  }
+}

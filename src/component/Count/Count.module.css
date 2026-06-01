@@ -1,0 +1,155 @@
+.line {
+  display: none;
+}
+.count {
+  display: flex;
+  flex-direction: column;
+}
+.topCount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: var(--color-text-gray);
+}
+.bold {
+  font-weight: 700;
+}
+
+.normal{
+  font-weight: 400;
+}
+.countText {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  color: var(--color-text-gray);
+  align-items: center;
+}
+
+
+
+[dir="rtl"] .countText{
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.imgText{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.countValue {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: var(--color-green-brand);
+}
+.digram {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.countImg {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: flex-start;
+  text-align: start;
+  align-items: flex-start;
+}
+.img {
+  width: 50px;
+}
+.countColor {
+  color: var(--color-mepco-wasco-accent-1);
+}
+.countTitle {
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+.topTitleColor {
+  color: var(--color-mepco-dark-accent-3);
+}
+
+.topTitleColorDark{
+  color: var(--color-mepco-dark);
+}
+
+[dir="rtl"] .countValue {
+  gap: 4px;
+}
+
+.countImgStart {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: flex-start;
+  text-align: start;
+  align-items: flex-start;
+}
+
+.countSpan{
+  padding: 0 2px;
+}
+
+/* Colors */
+.white{
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .countWidth {
+    min-width: 300px;
+  }
+}
+@media screen and (min-width: 1024px) {
+
+  .instateCountWidth{
+    max-width: 160px;
+  }
+
+  .topTitle{
+    max-width: 180px;
+  }
+  .countLine {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .withLine {
+    gap: 16px;
+  }
+
+  .withoutLine {
+    gap: 0;
+  }
+  .line {
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #4d4d4d;
+  }
+  .underText {
+    max-width: 180px;
+  }
+  .underTextColor {
+    color: var(--color-mepco-dark-accent-3);
+  }
+  .countImg {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  .topTitleWidth{
+    max-width: 185px;
+  }
+
+  [dir="rtl"] .topTitleWidth{
+    max-width: 210px;
+  }
+}

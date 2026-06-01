@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.icon {
+  transition: all 0.4s ease-in-out;
+}
+
+@media (hover: hover) {
+  .wrapper .icon:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    left: 0;
+    top: 30%;
+    background-color: var(--color-green-brand);
+    padding: 5px;
+
+
+  }
+
+  [dir="rtl"] .wrapper{
+    right: 0;
+    left: initial;
+ 
+  }
+}

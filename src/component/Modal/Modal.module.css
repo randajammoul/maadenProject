@@ -1,0 +1,129 @@
+.wrapper {
+  --delay: 0.4s;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* left: 0; */
+  right: -100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* display: block; */
+  z-index: 1000;
+  min-height: 100vh;
+  background: transparent;
+  transition: var(--delay) ease-in-out;
+  /* opacity: 0; */
+}
+
+.wrapper.show {
+  right: 0;
+  animation: show-overlay 0.4s var(--delay) ease-in-out forwards;
+  /* opacity: 1; */
+}
+
+.wrapper.hide {
+  /* display: none; */
+}
+
+.modal {
+  padding: 20px;
+  /* width: 100%; */
+  max-width: 270px;
+  min-height: 200px;
+  color: white;
+  position: absolute;
+  background-color: var(--color-green-brand);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  right: 0;
+}
+
+.show .modal {
+  /* animation: modal-animation-show 1s ease-in-out forwards; */
+}
+
+.hide .modal {
+  /* animation: modal-animation-hide 1s ease-in-out forwards; */
+}
+
+.title {
+  font-weight: bold;
+  color: white;
+}
+.label {
+  font-weight: bold;
+  color: white;
+  margin-right: 5px;
+}
+
+[dir="rtl"] .label {
+  margin-right: initial;
+  margin-left: 5px;
+}
+
+.labelContainer,
+.labelContainer a {
+  color: rgba(255,255,255,0.8);
+}
+
+.closeContainer {
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeIcon {
+  object-fit: contain;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.close {
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media (hover: hover) {
+  .close:hover {
+    transform: scale(1.08);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    --delay: 0.5s;
+  }
+  .modal {
+    max-width: 390px;
+  }
+}
+
+@keyframes show-overlay {
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes modal-animation-show {
+  from {
+    right: -50%;
+  }
+  to {
+    right: 0%;
+  }
+}
+
+@keyframes modal-animation-hide {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}

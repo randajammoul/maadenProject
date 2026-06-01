@@ -1,0 +1,32 @@
+.cardYellow{
+    background-color: var(--color-yellow-brand-10); 
+}
+
+.invisible{
+    visibility: hidden;
+}
+
+.contaniercard ,.cardsContainer {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr; /* موبايل = عنصر تحت بعض */
+}
+@media screen and (min-width:911px) {
+ .cardsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contaniercard {
+  grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* التابلت */
+@media screen and (min-width: 1024px) {
+   .cardsContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+.contaniercard {
+  grid-template-columns: repeat(2, 1fr);
+  }
+  
+}

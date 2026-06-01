@@ -1,0 +1,38 @@
+.containerCardWood {
+  display: flex;
+  flex-direction: column-reverse; 
+  
+}
+
+@media screen and (min-width: 768px) {
+  .containerCardWood {
+    flex-direction: row;
+  }
+}
+.containerimage {
+  overflow: hidden; /* يمنع الصورة تطلع لبرا */
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.5s ease; /* سلاسة */
+}
+
+.image:hover {
+  filter: brightness(1.2);
+  transform: scale(1.1); /* بدل scale لحاله */
+}
+
+.titlecard{
+ display: flex;
+ justify-content: space-between;
+}
+.liner{
+    height: 1px;
+    background-color: white;
+}
+.containerText{
+    background-color: var(--color-yellow-brand);
+    padding: 15px;
+}

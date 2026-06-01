@@ -1,0 +1,82 @@
+.tabItem {
+  text-align: center;
+  border: 1px solid var(--color-yellow-brand);
+  background-color: var(--color-white); /* افتراضي */
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tabItem div {
+  position: relative;
+  z-index: 1; /* فوق الخلفية */
+}
+.noTextBase{
+  /* text-align: center; */
+  border: 1px solid var(--color-yellow-brand);
+  background-color: var(--color-white); /* افتراضي */
+  cursor: pointer;
+  padding: 10px;
+
+}
+.noTextBase:hover,
+.noTextBase.active
+{
+  background-color: var(--color-yellow-brand);
+  color: white;
+}
+/* hover و active للشاشات الصغيرة (<1280px) */
+@media screen and (max-width: 1279px) {
+  .tabItem.active,
+  .tabItem:hover {
+    background-color: var(--color-yellow-brand);
+  }
+
+  .tabItem.active div,
+  .tabItem:hover div {
+    color: white; /* النص أبيض */
+  }
+}
+
+/* للشاشات الكبيرة (>=1280px) */
+@media screen and (min-width: 1280px) {
+  .tabItem {
+    flex: 1;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    min-height: 285px;
+   
+  }
+
+  .tabItem::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -45px;
+    width: 130%;
+    height: 140%;
+    background-color: var(--color-yellow-brand);
+    transform: translateY(100%) rotate(-90deg);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-in-out;
+    z-index: 0; /* خلف النص */
+  }
+
+  .tabItem.active::after,
+  .tabItem:hover::after {
+    transform: translateY(0) skewY(-5deg);
+  }
+
+  .tabItem.active div,
+  .tabItem:hover div {
+    color: white;
+  }
+  .noTextBase{
+  min-height: 100px;
+   
+}
+}

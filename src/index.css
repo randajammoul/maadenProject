@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+@font-face {
+    font-family: "Riyal";
+    src: url("./assets/font/Riyal/Riyal.ttf") format("truetype");
+    font-weight: "normal";
+    font-style: "normal";
+}
+
+body {
+    margin: 0;
+    font-family: "Cairo", -apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }

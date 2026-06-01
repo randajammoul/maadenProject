@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.barsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.percentageContainer{
+    /* flex:0.1 */
+    min-width: 60px;
+}
+
+.barContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+}
+
+[dir="rtl"] .barContainer {
+  flex-direction: row;
+}
+
+.bar{
+    width: 100%;
+    height: 30px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color:var(--color-text-gray);
+}
+
+.active{
+  color: white;
+}
